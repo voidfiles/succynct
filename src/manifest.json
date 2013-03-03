@@ -23,6 +23,8 @@
       "js/analytics.js",
       "js/views/omnibox.js",
       "js/views/notifications.js",
+      "js/views/contextmenu.js",
+      "js/views/sharepopup.js",
       "js/posts.js",
       "js/interactions.js",
       "js/mentions.js",
@@ -36,7 +38,8 @@
     "<all_urls>",
     "notifications",
     "tabs",
-    "storage"
+    "storage",
+     "contextMenus"
   ],
   "omnibox": { "keyword" : "adn" },
   "web_accessible_resources": [

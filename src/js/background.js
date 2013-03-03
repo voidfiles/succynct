@@ -9,7 +9,7 @@ config.background = true;
  */
 app = new App({
   model: config,
-  collection: accounts,
+  collection: accounts
 });
 app.ready();
 promptAuth();
@@ -31,6 +31,16 @@ chrome.omnibox.setDefaultSuggestion({ description: 'Post to App.net <match>%s</m
 chrome.omnibox.onInputEntered.addListener(window.omniboxview.onInputEntered);
 chrome.omnibox.onInputChanged.addListener(window.omniboxview.onInputChanged);
 
+/**
+ * context menu
+ */
+var postToAdnCtx = chrome.contextMenus.create({
+  title: 'Share on ADN',
+  contexts: ['page', 'selection', 'link', 'image']
+});
+
+chrome.contextMenus.onClicked.addListener(window.contextmenu.onClick);
+
 
 /**
  * If there are no accounts, prompt for auth
@@ -50,3 +60,4 @@ function promptAuth() {
     n.render();
   }
 }
+

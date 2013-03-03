@@ -1,0 +1,9 @@
+body {
+    padding: 0 10px;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+textarea {
+    height: 100px;
+}
